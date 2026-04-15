@@ -23,7 +23,7 @@ class DoctorsSeeder extends Seeder
                 'status' => 'active',
                 'date_of_birth' => '1985-03-15',
                 'gender' => 'Laki-laki',
-                'photo' => 'https://images.unsplash.com/photo-1612349317662-23d05c69a055?w=500&h=500&fit=crop',
+                'photo' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

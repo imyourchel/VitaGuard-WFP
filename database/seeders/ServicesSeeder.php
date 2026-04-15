@@ -10,7 +10,6 @@ class ServicesSeeder extends Seeder
     public function run(): void
     {
         DB::table('services')->insert([
-            // Category 1: General Consultation
             [
                 'service_name' => 'Konsultasi Dokter Umum Online',
                 'description' => 'Layanan konsultasi kesehatan secara online dengan dokter umum berpengalaman untuk diagnosis awal dan rekomendasi penanganan kondisi kesehatan umum.',
@@ -29,7 +28,6 @@ class ServicesSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            // Category 2: Specialist Consultation
             [
                 'service_name' => 'Konsultasi Dokter Spesialis Anak',
                 'description' => 'Konsultasi ahli dengan dokter spesialis anak untuk pemantauan kesehatan anak, penilaian pertumbuhan, panduan imunisasi, dan penanganan penyakit anak.',
@@ -48,7 +46,6 @@ class ServicesSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            // Category 3: Medical Checkup
             [
                 'service_name' => 'Paket Pemeriksaan Kesehatan Dasar',
                 'description' => 'Pemeriksaan kesehatan menyeluruh termasuk pemeriksaan vital, pemeriksaan fisik, dan tes laboratorium awal untuk penilaian kesehatan umum.',
@@ -67,7 +64,6 @@ class ServicesSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            // Category 4: Laboratory Test
             [
                 'service_name' => 'Tes Hitung Darah Lengkap (CBC)',
                 'description' => 'Tes darah penting untuk mengevaluasi status kesehatan umum, mendeteksi anemia, infeksi, dan gangguan darah melalui analisis hitung sel komprehensif.',
@@ -86,7 +82,6 @@ class ServicesSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            // Category 5: Telemedicine
             [
                 'service_name' => 'Konsultasi Chat dengan Dokter',
                 'description' => 'Layanan konsultasi melalui chat real-time dengan dokter berlisensi untuk menjawab pertanyaan kesehatan, gejala, dan mendapatkan saran medis awal dengan cepat.',

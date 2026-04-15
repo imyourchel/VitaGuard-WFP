@@ -31,7 +31,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
 	<div class="container-lg">
-		<a class="navbar-brand" href="{{ url('/') }}">
+		<a class="navbar-brand" href="{{ url('/admin') }}">
 			<i class="fas fa-heartbeat" style="color: var(--secondary)"></i> VitaGuard
 		</a>
 		<span class="navbar-text ms-auto fw-bold">Admin Dashboard</span>
@@ -63,7 +63,7 @@
 
 		<!-- Orders -->
 		<div class="col-md-6 col-lg-3">
-			<a href="{{ route('admin.fitur', ['fitur' => 'order']) }}" class="menu-card orders">
+			<a href="{{ route('admin.fitur', ['fitur' => 'transactions']) }}" class="menu-card orders">
 				<div class="menu-icon"><i class="fas fa-receipt"></i></div>
 				<div class="menu-title">Transaksi</div>
 				<div class="menu-desc">Kelola transaksi dan konsultasi</div>

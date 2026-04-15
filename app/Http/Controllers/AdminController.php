@@ -9,44 +9,29 @@ use App\Models\Category;
 
 class AdminController extends Controller
 {
-    /**
-     * Display the admin dashboard
-     */
     public function index()
     {
         return view('admin.index');
     }
 
-    /**
-     * Display members list
-     */
     public function members()
     {
         $members = Member::with('user')->get();
         return view('admin.member', compact('members'));
     }
 
-    /**
-     * Display doctors list
-     */
     public function doctors()
     {
         $doctors = Doctor::with('user')->get();
-        return view('admin.doctor', compact('doctors'));
+        return view('admin.doctors.index', compact('doctors'));
     }
 
-    /**
-     * Display transactions list
-     */
-    public function order()
+    public function transactions()
     {
         $transactions = Transaction::with('member', 'member.user', 'service', 'doctor', 'doctor.user')->get();
-        return view('admin.transaksi', compact('transactions'));
+        return view('admin.transactions.index', compact('transactions'));
     }
 
-    /**
-     * Display categories list
-     */
     public function categories()
     {
         $categories = Category::all();

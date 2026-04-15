@@ -33,8 +33,8 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/{fitur}', function ($fitur) {
     if ($fitur == 'categories') {
         return app(AdminController::class)->categories();
-    } elseif ($fitur == 'order') {
-        return app(AdminController::class)->order();
+    } elseif ($fitur == 'transactions') {
+        return app(AdminController::class)->transactions();
     } elseif ($fitur == 'members') {
         return app(AdminController::class)->members();
     } elseif ($fitur == 'doctors') {
@@ -45,6 +45,18 @@ Route::get('/admin/{fitur}', function ($fitur) {
 })->name('admin.fitur');
 
 Route::get('/category/showExpensiveService', [CategoryController::class, 'showExpensiveService']);
+
+// Admin Transaction Detail Route
+Route::get('/admin/transactions/{transaction}', function ($transaction) {
+    $transaction = \App\Models\Transaction::findOrFail($transaction);
+    return view('admin.transactions.show', compact('transaction'));
+})->name('admin.transactions.show');
+
+// Admin Doctor Detail Route
+Route::get('/admin/doctors/{doctor}', function ($doctor) {
+    $doctor = \App\Models\Doctor::findOrFail($doctor);
+    return view('admin.doctors.show', compact('doctor'));
+})->name('admin.doctors.show');
 
 Route::resource('services', ServiceController::class);
 Route::resource('doctors', DoctorController::class);

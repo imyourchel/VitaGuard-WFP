@@ -76,7 +76,7 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('doctors.show', $doctor->id) }}" class="btn btn-sm btn-primary">
+                                <a href="{{ route('admin.doctors.show', $doctor->id) }}" class="btn btn-sm btn-primary">
                                     <i class="fas fa-eye me-1"></i>View
                                 </a>
                             </td>

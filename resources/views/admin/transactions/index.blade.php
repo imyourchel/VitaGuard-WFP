@@ -88,7 +88,7 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('transactions.show', $transaction->id) }}" class="btn btn-sm btn-primary">
+                                <a href="{{ route('admin.transactions.show', $transaction->id) }}" class="btn btn-sm btn-primary">
                                     <i class="fas fa-eye me-1"></i>View
                                 </a>
                             </td>

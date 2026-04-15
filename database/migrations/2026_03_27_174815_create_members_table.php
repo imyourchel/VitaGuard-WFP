@@ -11,23 +11,20 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->id();
 
-            // Relasi ke tabel users
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                   ->references('id')
                   ->on('users')
-                  ->onDelete('cascade'); // Hapus member jika user dihapus
+                  ->onDelete('cascade');
 
-            // Data profil spesifik member/pasien
             $table->date('date_of_birth')->nullable();
             $table->enum('gender', ['Laki-laki', 'Perempuan'])->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
 
-            // Info medis dasar (Opsional, tapi bagus untuk app kesehatan)
             $table->string('blood_type', 3)->nullable();
-            $table->integer('weight')->nullable(); // Dalam kg
-            $table->integer('height')->nullable(); // Dalam cm
+            $table->integer('weight')->nullable();
+            $table->integer('height')->nullable(); 
 
             $table->timestamps();
         });
