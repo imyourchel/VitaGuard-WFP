@@ -44,7 +44,7 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-lg">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <i class="fas fa-heartbeat" style="color: var(--secondary)"></i> VitaGuard
+            <i class="fas fa-heartbeat" style="color: var(--primary)"></i> VitaGuard
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>

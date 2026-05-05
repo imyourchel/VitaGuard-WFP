@@ -34,7 +34,7 @@ class AdminController extends Controller
 
     public function categories()
     {
-        $categories = Category::all();
+        $categories = Category::with('services')->withCount('services')->get();
         return view('admin.kategori', compact('categories'));
     }
 }
